@@ -1,6 +1,3 @@
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
-
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -46,3 +43,39 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+
+
+alias 194='echo feHTwXqfKn5yBOEf && ssh work@10.173.13.194'
+alias 169='echo MhxzKhl && ssh work@10.172.230.169'
+alias capi1='echo MhxzKhl && ssh work@10.172.230.169'
+alias capi1='echo MhxzKhl && ssh work@10.172.230.169'
+
+
+export SVN_EDITOR='vim'
+
+alias d='cd /Users/pangyongtao/renrenche/code/trunk'
+alias grep='grep --color=auto '
+# for color
+#export CLICOLOR=1
+# \h:\W \u\$
+#export PS1='\[\033[01;33m\]\u@\h\[\033[01;31m\] \W\$\[\033[00m\] '
+
+#enables colorin the terminal bash shell export
+export CLICOLOR=1
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
+#sets up thecolor scheme for list export
+
+#sets up theprompt color (currently a green similar to linux terminal)
+export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$ '
+
+#enables colorfor iTerm
+export TERM=xterm-color
+
+if brew list | grep coreutils > /dev/null ; then
+    PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+    alias ls='ls -F --show-control-chars --color=auto'
+    eval `gdircolors -b $HOME/.dir_colors`
+fi
+export PATH=$HOME/bin:$PATH:/usr/local/bin/:~/.composer/vendor/bin
